@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class TriggerAttack : MonoBehaviour
 {
+
+    [SerializeField] float damage = 30;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
-            other.gameObject.GetComponent<ennemyAI>().Attack();
+            other.GetComponent<playerHealth>().TakeDamage(damage);
         }
     }
 }

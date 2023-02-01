@@ -60,7 +60,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: TriggerAttack
+    path: mixamorig1:Hips/mixamorig1:RightUpLeg/TriggerAttack
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -72,7 +72,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1019525540
+      path: 2260903523
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -143,7 +143,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: TriggerAttack
+    path: mixamorig1:Hips/mixamorig1:RightUpLeg/TriggerAttack
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
