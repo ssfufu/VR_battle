@@ -11,12 +11,25 @@ public class PistolScript : MonoBehaviour
 
     public void Tir ()
     {
+        hitFxPrefab.SetActive(true);
+        StartCoroutine(WaitForHitFx());
+        Shoot();
+    }
+
+    IEnumerator WaitForHitFx()
+    {
+        yield return new WaitForSeconds(0.02f);
+        hitFxPrefab.SetActive(false);
+    }
+
+    public void Shoot()
+    {
         RaycastHit hitInfo;
         bool hit = Physics.Raycast(firepoint.transform.position, firepoint.transform.forward, out hitInfo);
         if (hit)
         {
+            Debug.Log("Hit");
             hitInfo.collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(firepoint.transform.forward * 10, hitInfo.point, ForceMode.Impulse);
-            Instantiate(hitFxPrefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
         }
 
         if(hit && hitInfo.transform.gameObject.tag == "Enemy")
