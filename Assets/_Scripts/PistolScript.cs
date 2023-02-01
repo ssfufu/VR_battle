@@ -28,7 +28,6 @@ public class PistolScript : MonoBehaviour
         bool hit = Physics.Raycast(firepoint.transform.position, firepoint.transform.forward, out hitInfo);
         if (hit)
         {
-            Debug.Log("Hit");
             hitInfo.collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(firepoint.transform.forward * 10, hitInfo.point, ForceMode.Impulse);
         }
 
