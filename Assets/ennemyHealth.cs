@@ -8,6 +8,7 @@ public class ennemyHealth : MonoBehaviour
 
     public void TakeDamage(float amount, GameObject bodyPartHit)
     {
+        Debug.Log("Hit ennemy " + health);
         float totalDamage = 0;
         if (bodyPartHit.tag == "Head")
         {

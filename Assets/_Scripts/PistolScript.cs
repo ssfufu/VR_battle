@@ -42,13 +42,14 @@ public class PistolScript : MonoBehaviour
     {
         RaycastHit hitInfo;
         bool hit = Physics.Raycast(firepoint.transform.position, firepoint.transform.forward, out hitInfo);
-        if (hit)
+        if (hit && hitInfo.transform.gameObject.tag == "Destructible")
         {
             hitInfo.collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(firepoint.transform.forward * 10, hitInfo.point, ForceMode.Impulse);
         }
 
-        if(hit && hitInfo.transform.gameObject.tag == "Enemy")
+        if(hit && hitInfo.transform.gameObject.tag == "Ennemy")
         {
+            Debug.Log("Hit ennemy");
             hitInfo.transform.gameObject.GetComponent<ennemyHealth>().TakeDamage(pistolDamage, hitInfo.collider.gameObject);
         }
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -736,8 +736,9 @@ GameObject:
   - component: {fileID: 448563976}
   - component: {fileID: 448563981}
   - component: {fileID: 448563977}
+  - component: {fileID: 448563982}
   m_Layer: 0
-  m_Name: RightHand Controller TP
+  m_Name: Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -948,6 +949,114 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &448563982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448563975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 908003119}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4
+  m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 448563975}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 448563975}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectActionTrigger: 0
+  m_HideControllerOnSelect: 0
+  m_AllowHoveredActivate: 0
+  m_TargetPriorityMode: 0
+  m_PlayAudioClipOnSelectEntered: 0
+  m_AudioClipForOnSelectEntered: {fileID: 0}
+  m_PlayAudioClipOnSelectExited: 0
+  m_AudioClipForOnSelectExited: {fileID: 0}
+  m_PlayAudioClipOnSelectCanceled: 0
+  m_AudioClipForOnSelectCanceled: {fileID: 0}
+  m_PlayAudioClipOnHoverEntered: 0
+  m_AudioClipForOnHoverEntered: {fileID: 0}
+  m_PlayAudioClipOnHoverExited: 0
+  m_AudioClipForOnHoverExited: {fileID: 0}
+  m_PlayAudioClipOnHoverCanceled: 0
+  m_AudioClipForOnHoverCanceled: {fileID: 0}
+  m_AllowHoverAudioWhileSelecting: 1
+  m_PlayHapticsOnSelectEntered: 0
+  m_HapticSelectEnterIntensity: 0
+  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectExited: 0
+  m_HapticSelectExitIntensity: 0
+  m_HapticSelectExitDuration: 0
+  m_PlayHapticsOnSelectCanceled: 0
+  m_HapticSelectCancelIntensity: 0
+  m_HapticSelectCancelDuration: 0
+  m_PlayHapticsOnHoverEntered: 0
+  m_HapticHoverEnterIntensity: 0
+  m_HapticHoverEnterDuration: 0
+  m_PlayHapticsOnHoverExited: 0
+  m_HapticHoverExitIntensity: 0
+  m_HapticHoverExitDuration: 0
+  m_PlayHapticsOnHoverCanceled: 0
+  m_HapticHoverCancelIntensity: 0
+  m_HapticHoverCancelDuration: 0
+  m_AllowHoverHapticsWhileSelecting: 1
 --- !u!1001 &491910682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2669,7 +2778,7 @@ GameObject:
   - component: {fileID: 1131730325}
   m_Layer: 3
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2978,7 +3087,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1743744537, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
 --- !u!1001 &1317639265
 PrefabInstance:
@@ -3497,6 +3607,7 @@ GameObject:
   - component: {fileID: 1582231811}
   - component: {fileID: 1582231816}
   - component: {fileID: 1582231812}
+  - component: {fileID: 1582231817}
   m_Layer: 0
   m_Name: LeftHand Controller TP
   m_TagString: Untagged
@@ -3709,6 +3820,114 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1582231817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582231810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 908003119}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4
+  m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1582231810}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1582231810}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectActionTrigger: 0
+  m_HideControllerOnSelect: 0
+  m_AllowHoveredActivate: 0
+  m_TargetPriorityMode: 0
+  m_PlayAudioClipOnSelectEntered: 0
+  m_AudioClipForOnSelectEntered: {fileID: 0}
+  m_PlayAudioClipOnSelectExited: 0
+  m_AudioClipForOnSelectExited: {fileID: 0}
+  m_PlayAudioClipOnSelectCanceled: 0
+  m_AudioClipForOnSelectCanceled: {fileID: 0}
+  m_PlayAudioClipOnHoverEntered: 0
+  m_AudioClipForOnHoverEntered: {fileID: 0}
+  m_PlayAudioClipOnHoverExited: 0
+  m_AudioClipForOnHoverExited: {fileID: 0}
+  m_PlayAudioClipOnHoverCanceled: 0
+  m_AudioClipForOnHoverCanceled: {fileID: 0}
+  m_AllowHoverAudioWhileSelecting: 1
+  m_PlayHapticsOnSelectEntered: 0
+  m_HapticSelectEnterIntensity: 0
+  m_HapticSelectEnterDuration: 0
+  m_PlayHapticsOnSelectExited: 0
+  m_HapticSelectExitIntensity: 0
+  m_HapticSelectExitDuration: 0
+  m_PlayHapticsOnSelectCanceled: 0
+  m_HapticSelectCancelIntensity: 0
+  m_HapticSelectCancelDuration: 0
+  m_PlayHapticsOnHoverEntered: 0
+  m_HapticHoverEnterIntensity: 0
+  m_HapticHoverEnterDuration: 0
+  m_PlayHapticsOnHoverExited: 0
+  m_HapticHoverExitIntensity: 0
+  m_HapticHoverExitDuration: 0
+  m_PlayHapticsOnHoverCanceled: 0
+  m_HapticHoverCancelIntensity: 0
+  m_HapticHoverCancelDuration: 0
+  m_AllowHoverHapticsWhileSelecting: 1
 --- !u!1 &1614167586
 GameObject:
   m_ObjectHideFlags: 0
@@ -4357,7 +4576,6 @@ GameObject:
   - component: {fileID: 1870137048}
   - component: {fileID: 1870137047}
   - component: {fileID: 1870137046}
-  - component: {fileID: 1870137050}
   - component: {fileID: 1870137049}
   - component: {fileID: 1870137051}
   - component: {fileID: 1870137052}
@@ -4432,20 +4650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 0}
---- !u!114 &1870137050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870137045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 0}
-  m_DelayTime: 0
 --- !u!143 &1870137051
 CharacterController:
   m_ObjectHideFlags: 0
@@ -4458,7 +4662,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.16
+  m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -5081,7 +5285,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand Model
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1079277481, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
 --- !u!1 &2050475405 stripped
 GameObject:
@@ -5515,19 +5720,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516483, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9622234
+      value: 0.9622235
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516483, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000013923267
+      value: -0.00000013923268
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516483, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000016391272
+      value: -0.00000016391273
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516483, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.272261
+      value: -0.27226102
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516483, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5535,7 +5740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516485, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.27635533
+      value: 0.27635536
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516485, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5543,7 +5748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516485, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.64703435
+      value: 0.6470344
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516485, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5747,19 +5952,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516515, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.21387917
+      value: 0.21387918
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516515, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.27347457
+      value: 0.2734746
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516515, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.93744546
+      value: 0.9374455
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516515, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.025754958
+      value: -0.02575496
       objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516515, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5821,6 +6026,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -192.341
       objectReference: {fileID: 0}
+    - target: {fileID: 1849793432652516527, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9265444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849793432652516527, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000082576895
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849793432652516527, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000040814854
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849793432652516527, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3761855
+      objectReference: {fileID: 0}
     - target: {fileID: 1849793432652516541, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5870,6 +6091,7 @@ PrefabInstance:
       value: Right Hand Model (1)
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 6287867015090441862, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
     - {fileID: 1849793432659977067, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 09be8c8d47898dd4db7ba427732c256a, type: 3}
 --- !u!4 &2099137593 stripped
@@ -5954,7 +6176,7 @@ GameObject:
   - component: {fileID: 3020494454448613699}
   - component: {fileID: 3020494454448613698}
   - component: {fileID: 3020494454448613700}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Browning_hp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
