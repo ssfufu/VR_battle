@@ -1,16 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PistolScript : MonoBehaviour
 {
     [SerializeField] GameObject firepoint;
     [SerializeField] int pistolDamage = 15;
     [SerializeField] GameObject hitFxPrefab;
+    [SerializeField] int bulletMax = 11;
+    [SerializeField] TextMeshProUGUI bulletText;
+    int currentBulletAmount;
 
+    private void Start()
+    {
+        currentBulletAmount = bulletMax;
+        bulletText.text = currentBulletAmount.ToString("00");
+    }
 
     public void Tir ()
     {
+        if (currentBulletAmount <= 0) 
+        {
+            Debug.Log("No more bullets");
+            return;
+        }
+        currentBulletAmount--;
+        bulletText.text = currentBulletAmount.ToString("00");
         hitFxPrefab.SetActive(true);
         StartCoroutine(WaitForHitFx());
         Shoot();
@@ -35,5 +51,11 @@ public class PistolScript : MonoBehaviour
         {
             hitInfo.transform.gameObject.GetComponent<ennemyHealth>().TakeDamage(pistolDamage, hitInfo.collider.gameObject);
         }
+    }
+
+    public void Reload()
+    {
+        currentBulletAmount = bulletMax;
+        bulletText.text = currentBulletAmount.ToString("00");
     }
 }
