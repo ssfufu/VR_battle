@@ -14,9 +14,13 @@ public class GrabHandPose : MonoBehaviour
 
     private Quaternion[] startingFingerRotations;
     private Quaternion[] finalFingerRotations;
+
+    
+
+    XRGrabInteractable grabInteractable;
     void Start()
     {
-        XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.selectEntered.AddListener(SetupPose);
         rightHandPose.gameObject.SetActive(false);
     }
@@ -31,8 +35,10 @@ public class GrabHandPose : MonoBehaviour
             
             handData.animator.enabled = false; // Disable the animator
 
+            Vector3 handOffset = rightHandPose.transform.position - grabInteractable.attachTransform.position; // Get the offset between the hand pose and the attach transform
+
             SetHandDataValues(handData, rightHandPose);
-            SetHandData(handData, finalHandPosition, finalHandRotation, finalFingerRotations);
+            SetHandData(handData, handOffset, finalFingerRotations);
         }
     }
 
@@ -54,10 +60,15 @@ public class GrabHandPose : MonoBehaviour
         }
     }
 
-    public void SetHandData(HandData h, Vector3 pos, Quaternion rot, Quaternion[] bonesRotation)
+    public void SetHandData(HandData h,Vector3 offset , Quaternion[] bonesRotation)
     {
-        h.root.localPosition = pos;
-        h.root.localRotation = rot;
+        
+        // h.transform.position = rightHandPose.transform.position;
+        // h.transform.rotation = rightHandPose.transform.rotation;
+        grabInteractable.attachTransform.position = rightHandPose.transform.position;
+        grabInteractable.attachTransform.localEulerAngles = new Vector3(0, 90 + rightHandPose.transform.localEulerAngles.x,0);
+
+
 
         for (int i = 0; i < bonesRotation.Length; i++)
         {
